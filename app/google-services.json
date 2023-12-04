@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "79759398975",
+    "project_id": "mahnomusic",
+    "storage_bucket": "mahnomusic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79759398975:android:579fc4d22437c8d32c408a",
+        "android_client_info": {
+          "package_name": "com.monke.machnomusic3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS8bjNe-98_bR99vbKZaPPBr0ltEzOqtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

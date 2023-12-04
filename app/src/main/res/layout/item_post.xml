@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/pic_profile"
+        android:layout_width="@dimen/post_profile_pic_size"
+        android:layout_height="@dimen/post_profile_pic_size"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_profile" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/pic_profile"
+        app:layout_constraintTop_toTopOf="@+id/pic_profile"
+        tools:text="Кудж Кобейн" />
+
+    <TextView
+        android:id="@+id/txt_login"
+        style="@style/DescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/pic_profile"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"
+        tools:text="kobain" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        style="@style/DescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/pic_profile"
+        app:layout_constraintTop_toBottomOf="@+id/txt_login"
+        tools:text="Вчера в 19:17" />
+
+    <TextView
+        android:id="@+id/txt_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pic_profile"
+        tools:text="@string/big_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_images"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_post"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_post_photo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_tracks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_images"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_track" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

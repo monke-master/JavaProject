@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.monke.machnomusic3.ui.signUpFeature.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_emailFragment"
+            app:destination="@id/emailFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out" />
+        <action
+            android:id="@+id/action_startFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+        <action
+            android:id="@+id/action_startFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.monke.machnomusic3.ui.signUpFeature.email.EmailFragment"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_email" >
+        <action
+            android:id="@+id/action_emailFragment_to_nameFragment"
+            app:destination="@id/nameFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nameFragment"
+        android:name="com.monke.machnomusic3.ui.signUpFeature.username.UsernameFragment"
+        android:label="fragment_name"
+        tools:layout="@layout/fragment_username" >
+        <action
+            android:id="@+id/action_nameFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.monke.machnomusic3.ui.signUpFeature.GenresFragment"
+        android:label="fragment_genres"
+        tools:layout="@layout/fragment_genres" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.monke.machnomusic3.ui.signInFeature.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.monke.machnomusic3.ui.signUpFeature.PasswordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_passwordFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.monke.machnomusic3.ui.mainFeature.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_musicPlayerFragment"
+            app:destination="@id/musicPlayerFragment"
+            app:enterAnim="@anim/push_up_in"
+            app:exitAnim="@anim/push_up_out"
+            app:popEnterAnim="@anim/push_down_in"
+            app:popExitAnim="@anim/push_down_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_uploadTrackFragment"
+            app:destination="@id/uploadTrackFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_uploadAlbumFragment"
+            app:destination="@id/uploadAlbumFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_albumFragment"
+            app:destination="@id/albumFragment"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_right_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/musicPlayerFragment"
+        android:name="com.monke.machnomusic3.ui.musicFeature.musicPlayer.MusicPlayerFragment"
+        android:label="fragment_music_player"
+        tools:layout="@layout/fragment_music_player" />
+    <fragment
+        android:id="@+id/uploadTrackFragment"
+        android:name="com.monke.machnomusic3.ui.musicFeature.track.UploadTrackFragment"
+        android:label="fragment_upload_track"
+        tools:layout="@layout/fragment_upload_track" />
+    <fragment
+        android:id="@+id/uploadAlbumFragment"
+        android:name="com.monke.machnomusic3.ui.musicFeature.album.UploadAlbumFragment"
+        android:label="fragment_upload_album"
+        tools:layout="@layout/fragment_upload_album" />
+</navigation>
